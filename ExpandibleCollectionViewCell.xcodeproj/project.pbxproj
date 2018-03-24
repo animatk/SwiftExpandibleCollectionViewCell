@@ -13,6 +13,9 @@
 		2398A6BA2066C2AD006DC782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2398A6B92066C2AD006DC782 /* Assets.xcassets */; };
 		2398A6BD2066C2AD006DC782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2398A6BB2066C2AD006DC782 /* LaunchScreen.storyboard */; };
 		2398A6C62066C5F6006DC782 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6C52066C5F6006DC782 /* Extensions.swift */; };
+		2398A6CB2066CA61006DC782 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6CA2066CA61006DC782 /* Places.swift */; };
+		2398A6CD2066CC41006DC782 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6CC2066CC41006DC782 /* PlacesCell.swift */; };
+		2398A6CF2066E544006DC782 /* PlacesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6CE2066E544006DC782 /* PlacesCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2398A6BC2066C2AD006DC782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2398A6BE2066C2AD006DC782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2398A6C52066C5F6006DC782 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2398A6CA2066CA61006DC782 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		2398A6CC2066CC41006DC782 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
+		2398A6CE2066E544006DC782 /* PlacesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				2398A6C52066C5F6006DC782 /* Extensions.swift */,
+				2398A6CE2066E544006DC782 /* PlacesCollectionView.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -88,6 +95,7 @@
 		2398A6C82066C70C006DC782 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2398A6CA2066CA61006DC782 /* Places.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 		2398A6C92066C723006DC782 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2398A6CC2066CC41006DC782 /* PlacesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2398A6CB2066CA61006DC782 /* Places.swift in Sources */,
 				2398A6B22066C2AD006DC782 /* ViewController.swift in Sources */,
 				2398A6B02066C2AD006DC782 /* AppDelegate.swift in Sources */,
+				2398A6CD2066CC41006DC782 /* PlacesCell.swift in Sources */,
 				2398A6B82066C2AD006DC782 /* ExpandibleCollectionViewCell.xcdatamodeld in Sources */,
+				2398A6CF2066E544006DC782 /* PlacesCollectionView.swift in Sources */,
 				2398A6C62066C5F6006DC782 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

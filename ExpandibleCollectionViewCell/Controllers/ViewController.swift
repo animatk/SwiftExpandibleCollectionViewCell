@@ -15,13 +15,24 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view, typically from a nib.
 		
 		view.backgroundColor = .white
+		
+		setupView()
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
+	
+	let placesCollecion = PlacesCollectionView();
+	
+	func setupView()
+	{
+		view.addSubview( placesCollecion )
+		
+		view.addConstraintsWithFormat("H:|[v0]|", views: placesCollecion)
+		view.addConstraintsWithFormat("V:|[v0]|", views: placesCollecion)
+	}
 
 }
 
