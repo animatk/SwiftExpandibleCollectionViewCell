@@ -16,6 +16,7 @@
 		2398A6CB2066CA61006DC782 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6CA2066CA61006DC782 /* Places.swift */; };
 		2398A6CD2066CC41006DC782 /* PlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6CC2066CC41006DC782 /* PlacesCell.swift */; };
 		2398A6CF2066E544006DC782 /* PlacesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2398A6CE2066E544006DC782 /* PlacesCollectionView.swift */; };
+		23B4E33C206D8A290083698D /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23B4E33B206D8A290083698D /* ionicons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2398A6CA2066CA61006DC782 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		2398A6CC2066CC41006DC782 /* PlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCell.swift; sourceTree = "<group>"; };
 		2398A6CE2066E544006DC782 /* PlacesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionView.swift; sourceTree = "<group>"; };
+		23B4E33B206D8A290083698D /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		2398A6AE2066C2AD006DC782 /* ExpandibleCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				23B4E33A206D8A020083698D /* Fonts */,
 				2398A6AF2066C2AD006DC782 /* AppDelegate.swift */,
 				2398A6C42066C5C6006DC782 /* Resources */,
 				2398A6C72066C5FC006DC782 /* Controllers */,
@@ -106,6 +109,14 @@
 				2398A6CC2066CC41006DC782 /* PlacesCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		23B4E33A206D8A020083698D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				23B4E33B206D8A290083698D /* ionicons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23B4E33C206D8A290083698D /* ionicons.ttf in Resources */,
 				2398A6BD2066C2AD006DC782 /* LaunchScreen.storyboard in Resources */,
 				2398A6BA2066C2AD006DC782 /* Assets.xcassets in Resources */,
 			);
@@ -315,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2PKDW665T;
 				INFOPLIST_FILE = ExpandibleCollectionViewCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.anima.ExpandibleCollectionViewCell;
@@ -329,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U2PKDW665T;
 				INFOPLIST_FILE = ExpandibleCollectionViewCell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tk.anima.ExpandibleCollectionViewCell;

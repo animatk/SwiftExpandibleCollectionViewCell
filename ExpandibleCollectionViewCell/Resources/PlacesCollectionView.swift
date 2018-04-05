@@ -11,13 +11,15 @@ import UIKit
 class PlacesCollectionView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     var items = [Places]()
+    var cellPosition = CGRect()
+    var cellIsOpen = false
 	let cellId = "cell"
 
 	let collectionView : UICollectionView = {
 		let menu = UICollectionViewFlowLayout()
 		let cv = UICollectionView(frame: .zero, collectionViewLayout: menu)
-		cv.backgroundColor = UIColor.rgb(200, green: 230, blue: 255)
-		cv.contentInset = UIEdgeInsets(top: -20, left: 0, bottom: 0, right: 0)
+		cv.backgroundColor = UIColor.rgb(210, green: 210, blue: 210)
+		cv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 		return cv
 	}()
 	
@@ -113,6 +115,13 @@ class PlacesCollectionView: UIView, UICollectionViewDataSource, UICollectionView
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		
+		if cellIsOpen {
+			return
+		}
+		
+		cellIsOpen = true
+		
 		let cell = collectionView.cellForItem(at: indexPath) as! PlacesCell
 		
 		cell.superview?.bringSubview(toFront: cell)
@@ -120,11 +129,12 @@ class PlacesCollectionView: UIView, UICollectionViewDataSource, UICollectionView
 		cell.placeContent.alpha = 0;
 		cell.placeContent.isHidden = false
 		
+		cellPosition = cell.frame
 		
 		UIView.animate(
 			withDuration: 0.8
 			, delay: 0
-			, usingSpringWithDamping: 50
+			, usingSpringWithDamping: 0.5
 			, initialSpringVelocity: 1
 			, options: .curveEaseInOut
 			, animations: {
@@ -158,10 +168,35 @@ class PlacesCollectionView: UIView, UICollectionViewDataSource, UICollectionView
 	@objc func closePlaceDetails(sender: UIButton)
 	{
 		
-		
 		let indexPath = NSIndexPath(row: sender.tag, section: 0) as IndexPath
-		collectionView.isScrollEnabled = true
-		collectionView.reloadItems(at: [indexPath])
+		let cell = collectionView.cellForItem(at: indexPath) as! PlacesCell
+		
+		cell.placeContent.alpha = 0
+		cell.closeBtn.isHidden = true
+		
+		cellIsOpen = false
+		
+		UIView.animate(
+			withDuration: 0.8
+			, delay: 0
+			, usingSpringWithDamping: 0.7
+			, initialSpringVelocity: 1
+			, options: .curveEaseInOut
+			, animations: {
+				
+					self.collectionView.isScrollEnabled = true
+					cell.placeImage.frame = CGRect(x: 0, y: 0, width: self.collectionView.frame.width, height: 150)
+					cell.frame =   self.cellPosition
+				
+				
+			}) {_ in
+			
+				self.collectionView.isScrollEnabled = true
+				self.collectionView.reloadItems(at: [indexPath])
+				
+				
+			}
+		
 		
 		
 		

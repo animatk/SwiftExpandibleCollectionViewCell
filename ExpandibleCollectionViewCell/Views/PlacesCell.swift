@@ -12,10 +12,10 @@ class PlacesCell: UICollectionViewCell {
 	
 	let closeBtn : UIButton = {
 		let bt = UIButton()
-		bt.setTitle("X", for: .normal)
-		bt.titleLabel?.font = UIFont(name: "Helvetica", size: 16)
-		bt.backgroundColor = UIColor.rgb(100, green: 100, blue: 100, alpha: 0.5)
-		bt.layer.cornerRadius = 13
+		bt.setTitle("\u{f2d7}", for: .normal)
+		bt.titleLabel?.font = UIFont(name: "Ionicons", size: 18)
+		bt.backgroundColor = UIColor.rgb(80, green: 80, blue: 80, alpha: 0.5)
+		bt.layer.cornerRadius = 15
 		bt.isHidden = true
 		return bt
 	}()
@@ -87,15 +87,15 @@ class PlacesCell: UICollectionViewCell {
 	
     func setupView() {
 		
-		backgroundColor  = .white
+		backgroundColor  = .white //UIColor.rgb(210, green: 210, blue: 210)
 		
 		addSubview(placeImage)
 		addSubview(placeTitle)
 		addSubview(placeContent)
 		addSubview(closeBtn)
 		
-		addConstraintsWithFormat("H:|-20-[v0(25)]", views: closeBtn)
-		addConstraintsWithFormat("V:|-20-[v0(25)]", views: closeBtn)
+		addConstraintsWithFormat("H:|-20-[v0(30)]", views: closeBtn)
+		addConstraintsWithFormat("V:|-40-[v0(30)]", views: closeBtn)
 		
 		addConstraintsWithFormat("H:|[v0]|", views: placeImage)
 		addConstraintsWithFormat("H:|-16-[v0]-16-|", views: placeTitle)

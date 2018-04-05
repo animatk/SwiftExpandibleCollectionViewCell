@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
-		view.backgroundColor = .white
+		view.backgroundColor = UIColor.rgb(200, green: 230, blue: 255)
 		
 		setupView()
 	}
